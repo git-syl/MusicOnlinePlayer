@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.MainActivity">
+    <!--标题栏-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#333">
+        <!--标题文字-->
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/app_name"
+            android:textColor="#EEE"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <!--音乐播列表-->
+    <ListView
+        android:id="@+id/listv_main_music_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#333"
+        android:layout_weight="1"></ListView>
+
+    <!--控制器-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_weight="0"
+        android:background="#555"
+        android:orientation="horizontal">
+        <!--封面图-->
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="25dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="25dp"
+
+            android:src="@mipmap/ic_launcher" />
+        <!--对面右边的区域-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#555"
+            android:orientation="vertical">
+            <!--音乐名称-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:gravity="center_vertical"
+                android:text="@string/app_name"
+                android:textColor="#EEE"
+                android:textSize="18sp" />
+
+            <!--播放进度-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center_horizontal">
+                <!--当前播放进度条-->
+                <TextView
+                    android:id="@+id/txtv_main_curr_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="00:00"
+                    android:textColor="#EEE"
+                    android:textSize="18sp" />
+                <!--进度条-->
+                <SeekBar
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+                <!--播放总时间-->
+                <TextView
+                    android:id="@+id/txtv_main_total_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="00:00"
+                    android:textColor="#EEE"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <!--播放控制-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical">
+
+                <ImageButton
+                    android:id="@+id/imgbtn_main_pre"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="30dp"
+                    android:background="@mipmap/ic_launcher" />
+                <ImageButton
+                    android:id="@+id/imgbtn_main_play"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="30dp"
+                    android:background="@mipmap/ic_launcher" />
+                <ImageButton
+                    android:id="@+id/imgbtn_main_next"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="30dp"
+                    android:background="@mipmap/ic_launcher" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

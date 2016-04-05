@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">在线音乐播放器</string>
+    <string name="action_setting">Settings</string>
+    <string name="title_activity">SplashActivity</string>
+</resources>
